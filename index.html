@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link href="index.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    color: #eee;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #60b347;
+}
+
+.between {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.number {
+    font-size: 6rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    color: #eee;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+section.left,
+section.right {
+    width: 45%;
+}
+
+input.guess {
+    font-size: 2rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: #eee;
+}
+
+button.btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #60b347;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button.btn:hover {
+    background-color: #45a029;
+}
+
+button.again {
+    background-color: #ff6347;
+    width: auto;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+}
+
+button.again:hover {
+    background-color: #ff3b1f;
+}
+
+.message {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.label-score,
+.label-highscore {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.score,
+.highscore {
+    font-weight: bold;
+    color: #60b347;
+}
+
+.right p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guess My Number</h1>
+        <p class="between">(Between 1 and 20)</p>
+        <button class="btn again">Again</button>
+        <div class="number">?</div>
+    </header>
+    <main>
+        <section class="left">
+            <input type="number" class="guess" />
+            <button class="btn check">Check</button>
+        </section>
+        <section class="right">
+            <p class="message">Start guessing ..</p>
+            <p class="label-score">Score: <span class="score">20</span></p>
+            
+            </p>
+
+</section>
+    </main>
+    <script src="number.js"></script>
+    
+</body>
+</html>
